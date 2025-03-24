@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derin Karıştırma - Mert İnşaat Zemin</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="hizmet-detay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 55px;
+            background: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .service-header {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            position: relative;
+            height: 100vh;
+            margin-top: 0;
+            overflow: hidden;
+        }
+
+        .service-image {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slider img {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            object-fit: fill;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            top: 0;
+            left: 0;
+        }
+
+        .slider img.active {
+            opacity: 1;
+        }
+
+        .service-header h1 {
+            position: absolute;
+            left: 10%;
+            bottom: 20%;
+            transform: translateY(0);
+            color: white;
+            font-size: 4.5rem;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+            z-index: 2;
+            margin: 0;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: left;
+            max-width: 800px;
+            line-height: 1.2;
+            background: linear-gradient(45deg, #ffffff, rgba(255, 255, 255, 0.8));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+        }
+
+        .service-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(176, 115, 85, 0.4) 0%, rgba(176, 115, 85, 0.4) 50%, rgba(176, 115, 85, 0.4) 100%);
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .slider-container, .service-header, .service-image, .slider img {
+                height: 100vh;
+            }
+            .service-header h1 {
+                font-size: 2.5rem;
+                left: 5%;
+                max-width: 90%;
+            }
+        }
+
+        .service-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            margin-top: 50px;
+            z-index: 2;
+            background-color: var(--primary-color);
+            border-radius: 20px;
+        }
+
+        .section-title {
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-top: 2rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Mert İnşaat Zemin</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                <li><a href="../index.html#hakkimizda">Hakkımızda</a></li>
+                <li><a href="../index.html#projeler">Projeler</a></li>
+                <li><a href="../index.html#hizmetler">Hizmetler</a></li>
+                <li><a href="../index.html#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="service-detail">
+        <div class="service-header">
+            <div class="service-image">
+                <div class="slider-container">
+                    <div class="slider">
+                        <img src="../images/derin.jpg" alt="Derin Karıştırma Uygulaması" class="active">
+                    </div>
+                </div>
+            </div>
+            <h1>DERİN<br>KARIŞTIRMA</h1>
+        </div>
+
+        <div class="service-content">
+            <section class="intro-section">
+                <div class="intro-inner">
+                    <div class="intro-card">
+                        <h2>Derin Karıştırma Nedir?</h2>
+                        <p>Derin karıştırma, zayıf zeminlerin güçlendirilmesi için kullanılan etkili bir zemin iyileştirme yöntemidir. Özel karıştırıcı uçlar kullanılarak, zemin içerisine bağlayıcı malzemeler karıştırılır ve zeminin mukavemeti artırılır.</p>
+                    </div>
+
+                    <div class="intro-card">
+                        <h2>Kullanım Alanları</h2>
+                        <ul>
+                            <li><strong>Yumuşak Zeminler:</strong> Düşük taşıma kapasiteli zeminlerin iyileştirilmesi</li>
+                            <li><strong>Altyapı Projeleri:</strong> Yol ve köprü temellerinin güçlendirilmesi</li>
+                            <li><strong>Endüstriyel Yapılar:</strong> Fabrika ve depo temellerinin stabilizasyonu</li>
+                            <li><strong>Liman Yapıları:</strong> Kıyı ve liman inşaatlarında zemin güçlendirme</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="process">
+                <div class="process-inner">
+                    <h2 class="section-title">Uygulama Süreci</h2>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Zemin Analizi</h3>
+                                <ul>
+                                    <li>Detaylı zemin etüdü</li>
+                                    <li>Karışım tasarımı</li>
+                                    <li>Uygulama planlaması</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Ekipman Hazırlığı</h3>
+                                <ul>
+                                    <li>Karıştırıcı ekipmanın kurulumu</li>
+                                    <li>Bağlayıcı malzeme hazırlığı</li>
+                                    <li>Kalite kontrol sistemleri</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Karıştırma İşlemi</h3>
+                                <ul>
+                                    <li>Kolonların oluşturulması</li>
+                                    <li>Bağlayıcı enjeksiyonu</li>
+                                    <li>Karıştırma kontrolü</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Kalite Kontrol</h3>
+                                <ul>
+                                    <li>Numune testleri</li>
+                                    <li>Mukavemet ölçümleri</li>
+                                    <li>Performans değerlendirmesi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pricing">
+                <div class="pricing-inner">
+                    <h2 class="section-title">Fiyatlandırma Kriterleri</h2>
+                    <div class="pricing-factors">
+                        <div class="factor">
+                            <i class="fas fa-ruler-vertical"></i>
+                            <h3>Derinlik</h3>
+                            <p>İyileştirme yapılacak derinlik</p>
+                        </div>
+                        <div class="factor">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Zemin Koşulları</h3>
+                            <p>Mevcut zemin özellikleri</p>
+                        </div>
+                        <div class="factor">
+                            <i class="fas fa-vial"></i>
+                            <h3>Malzeme</h3>
+                            <p>Kullanılacak bağlayıcı türü ve miktarı</p>
+                        </div>
+                        <div class="factor">
+                            <i class="fas fa-chart-area"></i>
+                            <h3>Alan</h3>
+                            <p>Toplam uygulama alanı</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="cta-section">
+            <h2>Projeleriniz İçin Bize Ulaşın</h2>
+            <a href="../index.html#iletisim" class="cta-button">İletişime Geçin</a>
+        </div>
+    </main>
+
+    <div class="floating-contact">
+        <div class="contact-toggle" onclick="toggleContactSidebar()">
+            <i class="fas fa-phone"></i>
+        </div>
+        <div class="contact-info-sidebar" id="contactSidebar">
+            <h3>Hızlı İletişim</h3>
+            <div class="contact-person">
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <p>Ramazan Tapşık</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+90 532 91 84</p>
+                </div>
+            </div>
+            <div class="contact-person">
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <p>Mehmet Can Tapşık</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+90 534 62 02</p>
+                </div>
+            </div>
+            <div class="contact-item email">
+                <i class="fas fa-envelope"></i>
+                <p>info@mertinsaat.com</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mert İnşaat Zemin. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        function toggleContactSidebar() {
+            const sidebar = document.getElementById('contactSidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('contactSidebar');
+            const toggle = document.querySelector('.contact-toggle');
+            if (!sidebar.contains(event.target) && !toggle.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Slider fonksiyonu
+        function startSlider() {
+            const images = document.querySelectorAll('.slider img');
+            let currentImage = 0;
+            
+            // İlk resmi aktif yap
+            images[0].classList.add('active');
+
+            setInterval(() => {
+                // Mevcut resmi gizle
+                images[currentImage].classList.remove('active');
+                // Sonraki resme geç
+                currentImage = (currentImage + 1) % images.length;
+                // Yeni resmi göster
+                images[currentImage].classList.add('active');
+            }, 5000);
+        }
+
+        // Sayfa yüklendiğinde slider'ı başlat
+        document.addEventListener('DOMContentLoaded', startSlider);
+    </script>
+</body>
+</html>

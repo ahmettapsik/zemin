@@ -1,0 +1,598 @@
+:root {
+    --primary-color: #c17f59; /* Daha soft, toprak tonlarında kahverengi */
+    --primary-light: #d4956b; /* Açık kahverengi */
+    --primary-dark: #a66a47; /* Koyu kahverengi */
+    --primary-color-rgb: 193, 127, 89; /* RGB değerleri */
+    --light-bg: #f5f5f5;
+}
+
+.service-detail {
+    padding-top: 55px; /* Header yüksekliği */
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+}
+
+.service-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/texture.png');
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.service-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.service-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.service-image {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    display: block;
+}
+
+.service-content {
+    position: relative;
+}
+
+/* Kartlar ve bölümler */
+.intro-section, .process, .pricing {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.intro-inner, .process-inner, .pricing-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Giriş kartları */
+.intro-inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.intro-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    flex: 1 1 100%;
+    min-height: 300px; 
+    width: auto; 
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Kart içerikleri */
+.intro-card h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.intro-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.intro-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.intro-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.intro-card li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.intro-card li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+}
+
+.intro-card strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Süreç kartları */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.step {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.step-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.step-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.step-content li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.step-content li::before {
+    content: '→';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.step.jet-grout, .step.kullanım-alanları, .step.mini-kazık {
+    background-color: var(--light-bg);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 auto;
+    height: 300px; /* Kartların yüksekliğini eşitliyorum */
+}
+
+/* Fiyatlandırma kartları */
+.pricing {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.pricing-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.pricing h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.pricing-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    min-height: 300px;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.pricing-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.pricing-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.pricing-card li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+}
+
+@media (max-width: 768px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cta-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--primary-color);
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--primary-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .service-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .service-content {
+        padding: 3rem 1rem;
+    }
+
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-factors {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Floating Contact Styles */
+.floating-contact {
+    position: fixed;
+    top: 65%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.contact-toggle {
+    width: 50px;
+    height: 50px;
+    background: #B07355;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-toggle:hover {
+    transform: scale(1.05);
+}
+
+.contact-toggle i {
+    color: white;
+    font-size: 20px;
+}
+
+.contact-info-sidebar {
+    position: fixed;
+    top: 50%;
+    left: -250px;
+    transform: translateY(-50%);
+    width: 250px;
+    background: #FFFFFF;
+    border-radius: 0 10px 10px 0;
+    padding: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.contact-info-sidebar.active {
+    left: 50px;
+}
+
+.contact-info-sidebar h3 {
+    color: #B07355;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+    border-bottom: 2px solid #B07355;
+    padding-bottom: 6px;
+}
+
+.contact-person {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.contact-item i {
+    width: 14px;
+    color: #B07355;
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.email {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .contact-info-sidebar {
+        width: 230px;
+        left: -230px;
+    }
+    
+    .contact-info-sidebar.active {
+        left: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info-sidebar {
+        width: 220px;
+        left: -220px;
+    }
+    
+    .contact-info-sidebar.active {
+        left: 50px;
+    }
+}
+
+/* Teknik Özellikler Bölümü */
+.service-features {
+    padding: 4rem 0;
+    background-color: white;
+    position: relative;
+}
+
+.features-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.service-features h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.feature {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    color: #666;
+    font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info-sidebar {
+        width: 230px;
+        left: -230px;
+        pointer-events: none;
+        opacity: 0;
+    }
+    
+    .contact-info-sidebar.active {
+        left: 50px;
+        pointer-events: all;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info-sidebar {
+        width: 220px;
+        left: -220px;
+        pointer-events: none;
+        opacity: 0;
+    }
+    
+    .contact-info-sidebar.active {
+        left: 50px;
+        pointer-events: all;
+        opacity: 1;
+    }
+}
